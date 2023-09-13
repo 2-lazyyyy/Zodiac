@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+</head>
+<body>
+    <header>
+        <div class="nav container">
+            <a href="http://localhost:5502/3dslide/3dslide.html" class="logo"> < Back to Events</a>
+            <i class="bx bx-shopping-bag" id="cart-icon" data-quantity="0"></i>
+            <div class="cart">
+                <h2 class="cart-title">Your Cart</h2>
+                <div class="cart-content">
+                    
+                </div>
+                <div class="total">
+                    <div class="total-title">Total</div>
+                    <div class="total-price">$0</div>
+                </div>
+                <button type="button" class="btn-buy">Pay Now</button>
+                <i class="bx bx-x" id="close-cart"></i>
+            </div>
+        </div>
+    </header>
+
+    <section class="shop container">
+        <h2 class="section-title">Shop Products</h2>
+        <div class="shop-content">
+            <div class="product-box">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgNGB8xnQRDpVJbWgc3jHeu60GPSNzWVjDswJOxRhkPNyPR_31l_vswphpr6-OeCzDxx9wwA0ieZGQzxUBrDm26YaxwIbObf73U2kbtcM91k-hNTcU4VDbHGBc3PIWy3SBmnMmdhzh4WOn3zjCVybLnsCuHkajqvSfX6RCn6IqY8ROCI6i_Dj4d9lmMwCNU/s320/img1.jpg" alt="" class="product-img">
+                <h2 class="product-title">ANGEL'S CUP</h2>
+                <span class="price">$50</span>
+                <i class="bx bx-shopping-bag add-cart"></i>
+            </div>
+
+            <div class="product-box">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEipa7bkyJJK7AyAVjqgmopCq_j1SVOP6xkGnDdsfF29IFIThtyi_6Rr6uup_ola3NyTF5nbCORlVqZLzyq6dvbCv2m1Mr5t_bfoXKufVL0GuV-8CI48A88GlrbK2A8WE0X4kwhIFSKzvoyElWIG1omIoARkHCwpRIViMHgKBeJwh61hxVP_YPR0j4mOI3FM/s320/img2.webp" alt="" class="product-img">
+                <h2 class="product-title">ZODIAC BEADED BRACELET</h2>
+                <span class="price">$70.99</span>
+                <i class="bx bx-shopping-bag add-cart"></i>
+            </div>
+
+            <div class="product-box">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiAyCUC1dUmdGhlouQhzkJn15y_NJ8ll8HpWatnPplV7h8mmYjgXYEAn8tN16yD0PImQpWqjd22N-35Y2qSW9GA1IBLaATecc3YyfIhBz1IX3ETV0CWkN3NAAYgyEa8ADKXJkoJ90s1xbAM8KC__cpFkW_0IUidPXGGBSZp_chFsfwFQ5iLUepuDlp8jbCX/s320/img3.webp" alt="" class="product-img">
+                <h2 class="product-title">ULTIMATE RINGS</h2>
+                <span class="price">$24.98</span>
+                <i class="bx bx-shopping-bag add-cart"></i>
+            </div>
+
+            <div class="product-box">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjac0In46vScEBMbnTlzHy8X6NYRiGwG1IPQJLdxBzpCb8-2G04JftWrrLNBxrUS6KKADmkrMp9C5RKJgVxVJaD_scqB43tL4QZoQqCcgq5lYnx1XcqppdqWg1cNiTLGI7q85eMX2PrPs071qz45VRxHJxyCXkKNehjRT9ZnhEZ8MsUB36adsstrvECyLXz/s320/product4.jpeg" alt="" class="product-img">
+                <h2 class="product-title">ARIES TEE</h2>
+                <span class="price">$100</span>
+                <i class="bx bx-shopping-bag add-cart"></i>
+            </div>
+
+            <div class="product-box">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhTWRiKzt9CD_amlfDReTKvoyJnBQfi7eN74XHdo0uOpBE7nasfagcHEaj0OCynLFas_RHYyemqgjaeCkoP76ma6v0MnFsG1_0jD1QdOOfvBaQ82jvWuGsMBCw3MJ_4t_pomGwwzVl6slzWiiWapmGYreH2flbnHQSJjPEppiciZjMIkmZQUYqodcW5rdfw/s320/img4.webp" alt="" class="product-img">
+                <h2 class="product-title">CRYSTAL BALL</h2>
+                <span class="price">$80.50</span>
+                <i class="bx bx-shopping-bag add-cart"></i>
+            </div>
+
+            <div class="product-box">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEicCCiatYstWszC_ekwXhhdGuqGyPMnPlH_Lt8rvimu0V5PQm2pRzHWDA_1W5VB_TATXa2RFMFuxGv0Q5tNoqIjgJejutmyKDs4sLhe2405vj0Uhn6gqibiqO3_Hpawy5XJhmLgRqkJFGLa8Ck_JIyVfxUwB8Dc0Oe73I4n9gJYjgu40WguONe-r1IXzRJ-/s320/IMG5.jpg" alt="" class="product-img">
+                <h2 class="product-title">'GOOD' TAROT</h2>
+                <span class="price">$200</span>
+                <i class="bx bx-shopping-bag add-cart"></i>
+            </div>
+
+            <div class="product-box">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh2ai8ZWKqVMwyBV5VV98f6vLQ3dUIE1poh4T1_8kzNUzysrsdGjgsywa_BtOKWB6u_FIx9nt7Uzt8moxq8QH7XupA05qVJnjZscOw2285-LV4BMEOCFfJOiPk6wiaVdzWr7fdqAmzAUXNYjQP_Wjc9mZW8gn_Dt7zVseAkVJNorXlWLRvxOZ0ROBiO8JA1/s320/product7.jpeg" alt="" class="product-img">
+                <h2 class="product-title">METAL BOTTLE 1L</h2>
+                <span class="price">$80.04</span>
+                <i class="bx bx-shopping-bag add-cart"></i>
+            </div>
+
+            <div class="product-box">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiYHCw2zwvJhnqeX56n1FH63LSXLyMFLQ6JRabdzoNsYEMc2odCg0PbWW8Nz8YtdKBkeULIrGZcgEdRwcm7xqukvsy2NiQPUwJRBbQGyv-AHMVxExpMS8zMN2DJMeFCc1hH7PvajglnQxyYaN6nzeHMpAnebt1r8upQio-uXSMSDK7SGwQBAeFc6EbZx6ge/s320/product8.jpeg" alt="" class="product-img">
+                <h2 class="product-title">ULTRABOOST SHOES</h2>
+                <span class="price">$280</span>
+                <i class="bx bx-shopping-bag add-cart"></i>
+            </div>
+        </div>
+    </section>
+
+    <script src="./js/main.js"></script>
+    <script src="./js/cart.js"></script>
+</body>
+</html>

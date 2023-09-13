@@ -1,0 +1,149 @@
+
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    
+        <title>What's Zodiac?</title>
+        <link href="input.css" rel="stylesheet">
+        <link rel="stylesheet" href="./style.css">
+    </head>
+    <body>
+        <header>
+            <div class="nav">
+                <a href="./../3dslide/3dslide.html" class="logo">< Back to Events</a>
+                <a href="./../3dgetstart/index.html" class="home">Home</a>
+            </div>
+        </header>
+
+        <div id="cursor"></div>
+        <img id="image" src="./images/bg.png" >
+        <div class="wrapper">
+            <div class="card">
+                <form class="inputBox" onsubmit="findZodiac(event)">
+                    <input type="date" id="dateInput" required>
+                    <label>Enter&nbsp;your&nbsp;Birth&nbsp;Date</label>
+                    <input type="submit" value="Find Your Zodiac Sign" id="submit">
+                </form>
+            </div>
+        </div>
+        
+        
+
+        <!-- <div class="sidebar">
+        <ul>
+            <li class="logo" style="--bg: #333;">
+                <a href="#">
+                    <div class="icon menuToggle"></div>
+                    
+                </a>
+            </li>
+            <div class="Menulist">
+                <li style="--bg:#f44336;" class="active">
+                    <a href="./../3dslide/3dslide.html">
+                        <div class="icon"><ion-icon name="home-outline"></ion-icon></div>
+                        <div class="text">Home</div> 
+                    </a>
+                </li>
+                <li style="--bg:#ffa117;">
+                    <a href="#">
+                        <div class="icon"><ion-icon name="book"></ion-icon></div>
+                        <div class="text">Blogs</div> 
+                    </a>
+                </li>
+                <li style="--bg:#0fc70f;">
+                    <a href="#">
+                        <div class="icon"><ion-icon name="bookmark"></ion-icon></div>
+                        <div class="text">Shop</div> 
+                    </a>
+                </li>
+                <li style="--bg:#2196f3;">
+                    <a href="#">
+                        <div class="icon"><ion-icon name="people"></ion-icon></div>
+                        <div class="text">About</div> 
+                    </a>
+                </li>
+                <li style="--bg:#b145e9;">
+                    <a href="#">
+                        <div class="icon"><ion-icon name="mail"></ion-icon></div>
+                        <div class="text">Contact</div> 
+                    </a>
+                </li>
+                <li style="--bg:#e91e63;">
+                    <a href="./../3dgetstart/3dgetstart.html">
+                        <div class="icon"><ion-icon name="star-half"></ion-icon></div>
+                        <div class="text">Get Started</div> 
+                    </a>
+                </li>
+            </div>
+            <div class="bottom">
+                <li style="--bg:#333;">
+                    <a href="#">
+                        <div class="icon"><ion-icon name="log-out-outline"></ion-icon></div>
+                        <div class="text">Logout</div> 
+                    </a>
+                </li>
+            </div>
+        </ul>
+    </div> -->
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+        
+        <script type="text/javascript" charset="utf-8">
+
+            let label = document.querySelector('label');
+            
+            label.innerHTML = label.innerText.split('').map((letters,i) => `<span class= 's' style="transition-delay: ${i*30}ms; filter: hue-rotate(${i*10}deg);">${letters}</span>`).join('');
+            
+            // label.style.color="#0f0";
+            // label.style.textShadow=`0 0 ${5}px #0f0,0 0 ${15}px #0f0,0 0 ${30}px #0f0`;
+            // label.style.transform=`translateY(${0}px)`;
+
+            const dateInput = document.getElementById('dateInput');
+
+            dateInput.addEventListener('focus', function() {
+
+                    dateInput.type = 'date';
+                    dateInput.classList.add('date');
+                
+            });
+           
+            // dateInput.addEventListener('blur', function() {
+
+            //     dateInput.type = 'text';
+            //     dateInput.classList.remove('date');
+
+            // });
+
+            let cursor = document.querySelector("#cursor");
+            let body = document.querySelector("body");
+            document.addEventListener('mousemove', (e) => {
+                // body.style.backgroundPositionX = e.pageX + 'px';
+                // body.style.backgroundPositionY = e.pageY + 'px';
+                cursor.style.top = e.pageY + 'px';
+                cursor.style.left = e.pageX + 'px';
+            })
+                
+            let menuToggle = document.querySelector('.menuToggle');
+            let sidebar = document.querySelector('.sidebar');
+            menuToggle.onclick = function(){
+                
+                menuToggle.classList.toggle('active');
+                sidebar.classList.toggle('active');
+            }
+            let Menulist = document.querySelectorAll('.Menulist li');
+            function activeLink(){
+                Menulist.forEach((item) => 
+                item.classList.remove('active'));
+                this.classList.add('active');
+            }
+            Menulist.forEach((item) => 
+            item.addEventListener('click',activeLink));
+
+           
+        
+        
+
+        </script>
+        <script src="input.js"></script>
+    </body>
+</html>

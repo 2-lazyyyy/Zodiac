@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Result</title>
+        <link rel="stylesheet" type="text/css" href="beat.css">
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="heart"></div>
+            <div class="sign1"></div>
+            <div class="sign2"></div>
+        </div>
+
+        <p class="p">Here's Your Relationship's Result!!!</p>
+
+        <div class="container" style="perspective: 500px;">
+            <div class="envelope-wrapper">
+                <div class="envelope" style="perspective: 500px;">
+                    <div class="letter">
+                        <div class="text">
+                            <strong>Dear Person.</strong>
+                            <p style="line-height: 18px;" class="para" style="font-family: 'Poppins';">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                Numquam labore omnis minus maiores laboriosam, facere in beatae esse. 
+                            </p>
+                            <a href="./../check.html" class="btn">Calculate Again</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="heart2"></div>
+            </div>
+        </div>
+        <script>
+            const envelope = document.querySelector('.envelope-wrapper');
+            const letter = document.querySelector('.letter');
+            envelope.addEventListener('click', () => {
+                envelope.classList.toggle('flap');
+
+                
+                letter.classList.toggle('active');
+
+                // letter.classList.remove('active');
+            });
+            
+        </script>
+
+        <script src="beat.js"></script>
+    </body>
+</html>

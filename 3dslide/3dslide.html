@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./3dslide.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+</head>
+<body>
+
+    
+    <nav>
+        <a href="#" class="active">Events</a>
+        <a href="http://localhost:3000">Shop</a>
+        <a href="./../About/index.html">About</a>
+        <!-- <a href="#">Contact</a> -->
+        <a href="./../contact/index.html">Contact</a>
+        <div id="indicator"></div>
+        <!-- <a href="./../3dgetstart/index.html" style="position: absolute; right: 0;">Logout</a> -->
+        <a href="./../3dgetstart/index.html" style="position: absolute; right: 200px;">Home</a>
+    </nav>
+    
+    <header>
+        <a href="#" class="brand">SkyArt</a>
+        <div class="menu-btn"></div>
+        <div class="navigation">
+            <div class="navigation-items">
+                <a href="./../3dslide/3dslide.html" class="event">Events</a>
+                <a href="http://localhost:3000">Shop</a>
+                <a href="./../About/index.html">About</a>
+                <a href="./../contact/index.html">Contact</a>
+            </div>
+        </div>
+    </header>
+    
+    <div class="app" style="margin-top: 1000px;">
+        <div class="hello"><h1>Dreams do Come True</h1></div>
+        <div class="cardList">
+            <button class="cardList__btn btn btn--left">
+                <div class="icon">
+                    <svg>
+                        <use xlink:href="#arrow-left"></use>
+                    </svg>
+                </div>
+            </button>
+            <div class="cards__wrapper">
+                <a href="./../input/input.html" class="card current--card">
+                    <div class="card__image">
+                        <img src="hello.avif" alt="">
+                    </div>
+                </a>
+                <a href="./../number/index.html" class="card next--card">
+                    <div class="card__image">
+                        <img src="2.jpg" alt="">
+                    </div>
+                </a>
+                <a href="./../Love Match/check.html" class="card previous--card">
+                    <div class="card__image">
+                        <img src="love.webp" alt="">
+                    </div>
+                </a>
+            </div>
+            <button class="cardList__btn btn btn--right">
+                <div class="icon">
+                    <svg>
+                        <use xlink:href="#arrow-right"></use>
+                    </svg>
+                </div>
+            </button>
+        </div>
+        <div class="infoList">
+            <div class="info__wrapper">
+                <div class="info current--info">
+                    <h1 class="text name">Zodiac</h1>
+                    <h4 class="text location">Sky Art</h4>
+                    <p class="text description">The stars are calling</p> 
+                </div>
+                <div class="info next--info">
+                    <h1 class="text name">Numerology</h1>
+                    <h4 class="text location">Sky Art</h4>
+                    <p class="text description">Fortune is never far away</p>
+                </div>
+                <div class="info previous--info">
+                    <h1 class="text name">Love Calculator</h1>
+                    <h4 class="text location">Sky Art</h4>
+                    <p class="text description">How Sweet!</p>
+                </div>
+            </div>
+        </div>
+        <div class="app__bg">
+            <div class="app__bg__image current--image">
+                <img src="1.1.jpg" alt="">
+            </div>
+            <div class="app__bg__image next--image">
+                <img src="2.1.jpg" alt="">
+            </div>
+            <div class="app__bg__image previous--image">
+                <img src="love2.jpg" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="loading__wrapper">
+        <div class="loader--text">Loading...</div>
+        <div class="loader">
+            <span></span>
+        </div>
+    </div>
+    <!-- svg starts -->
+    <svg class="icons" style="display: none;">
+        <symbol id="arrow-left" xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'>
+            <polyline points='328 112 184 256 328 400'
+                         style='fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px' />
+        </symbol>
+        <symbol id="arrow-right" xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'>
+            <polyline points='184 112 328 256 184 400'
+                         style='fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px' />
+        </symbol>
+    </svg>
+    <!-- svg ends -->
+    <!-- <div id="pic" style="position: absolute; top: 1500px!important;"><img src="2.1.jpg" alt=""></div> -->
+
+    
+    <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.3/gsap.min.js"></script>
+    <script src="./script.js"></script>
+    <script>
+
+        const menuBtn = document.querySelector('.menu-btn');
+        const navigation = document.querySelector('.navigation');
+
+        menuBtn.addEventListener('click', () => {
+            menuBtn.classList.toggle('active');
+            navigation.classList.toggle('active');
+        });
+
+        let marker = document.querySelector('#indicator');
+        let nav = document.querySelector('nav');
+        let item = document.querySelectorAll('nav a');
+        nav.onclick = function(){
+            marker.classList.toggle('change');
+        }
+        function indicator(e){
+            marker.style.left = e.offsetLeft + 'px';
+            marker.style.width = e.offsetWidth + 'px';
+            marker.style.display = 'block';
+            marker.style.filter = 'hue-rotate('+ Math.random() *360 +'deg)'
+        }
+        item.forEach(link => {
+            link.addEventListener("click", (e) => {
+                indicator(e.target);
+            })
+        })
+        function addActiveClass(){
+            item.forEach((i) => 
+            i.classList.remove('active'));
+            this.classList.add('active');
+        }
+        item.forEach((i) => 
+        i.addEventListener("click", addActiveClass))
+
+
+    let text = document.querySelectorAll('.hello h1').forEach(text => {
+    text.innerHTML = text.innerText.split('').map((letters,i) => `<span style="animation-delay:${i*100}ms;">${letters}</span>`).join('');
+})
+  
+    
+
+    
+    </script>
+</body>
+</html>
